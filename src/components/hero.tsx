@@ -8,7 +8,6 @@ import { Logo } from "./svgs";
 import Form from "./form";
 
 export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
-  const year = useMemo(() => new Date().getFullYear(), []);
   const [isSuccess, setIsSuccess] = useState(false);
 
   return (
@@ -21,18 +20,18 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-400" />
           </span>
           <p className="uppercase text-sm font-medium">
-            available in early {year}
+            available in early December
           </p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 max-w-2xl">
         <h2 className="text-4xl font-bold text-foreground">
-          {isSuccess ? "You're on the waitlist" : "Get early Access"}
+          {isSuccess ? "You're on the waitlist" : "AI for food lovers."}
         </h2>
         <p className="text-base text-muted-foreground text-center max-w-md">
           {isSuccess
-            ? "You've successfully secured your spot.We’ll hit you up the moment it’s your turn to dive in"
-            : "Be among the first to experience the future of AI-powered productivity. Join the waitlist to get notified when we launch."}
+            ? "You've successfully secured your spot. We'll hit you up the moment it's your turn to dive in"
+            : "Your ChatGPT for food. Describe any dish or upload a photo and get real-time 3D map guidance to the best restaurants—plus easy booking and pre-orders."}
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 w-full max-w-md">
@@ -41,7 +40,7 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
       <div className="flex items-center justify-center gap-2">
         <People count={waitlistPeople} />
       </div>
-      <Countdown period={new Date("2025-12-31")} />
+      <Countdown period={new Date("2025-11-30")} />
     </div>
   );
 }

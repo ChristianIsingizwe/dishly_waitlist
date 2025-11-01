@@ -17,10 +17,62 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
   });
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
+  const [userEmail, setUserEmail] = useState<string>("");
+  const [feedback, setFeedback] = useState<string>("");
+  const [feedbackSubmitting, setFeedbackSubmitting] = useState<boolean>(false);
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleFeedbackChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setFeedback(e.target.value);
+  };
+
+  const handleFeedbackSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!feedback.trim()) {
+      toast.error("Please share your feature ideas with us!");
+      return;
+    }
+
+    if (!userEmail) {
+      toast.error("Unable to save feedback. Please refresh and try again.");
+      return;
+    }
+
+    try {
+      setFeedbackSubmitting(true);
+
+      const response = await fetch("/api/notion", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: userEmail,
+          suggestedFeatures: feedback,
+        }),
+      });
+
+      if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error("User not found in database");
+        }
+        throw new Error("Failed to save feedback");
+      }
+
+      setFeedbackSubmitted(true);
+      toast.success("Thank you for your feedback! 🙏");
+    } catch (error) {
+      console.error("Error submitting feedback:", error);
+      toast.error("Failed to submit feedback. Please try again.");
+    } finally {
+      setFeedbackSubmitting(false);
+    }
   };
 
   const isValidEmail = (email: string) => {
@@ -94,6 +146,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
       toast.promise(promise, {
         loading: "Getting you on the waitlist... 🚀",
         success: (data) => {
+          setUserEmail(formData.email);
           setFormData({ email: "", name: "" });
           setSuccess(true);
           onSuccessChange?.(true);
@@ -138,28 +191,92 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
     }
   };
 
-  const resetForm = () => {
-    setStep(1);
-    setFormData({ email: "", name: "" });
-    setSuccess(false);
-    onSuccessChange?.(false);
-  };
-
   return (
     <div className="w-full relative">
       {success ? (
         <motion.div
-          className="p-6 flex justify-center items-center"
+          className="flex flex-col gap-4 w-full"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <button
-            onClick={resetForm}
-            className="bg-[#e5ff00] text-black px-6 py-2 rounded-[12] font-semibold hover:bg-opacity-90 transition-all"
-            type="button"
+          <motion.div
+            className="flex justify-center items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
           >
-            Join with another email
-          </button>
+            <button
+              disabled
+              className="bg-[#e5ff00] text-black px-6 py-2 rounded-[12] font-semibold opacity-75 cursor-not-allowed transition-all"
+              type="button"
+            >
+              Joined
+            </button>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-col gap-3 mt-2"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <label className="text-sm font-medium text-foreground text-center">
+              Have feature ideas? Share them with us!
+            </label>
+            <form
+              onSubmit={handleFeedbackSubmit}
+              className="flex flex-col gap-3"
+            >
+              <textarea
+                value={feedback}
+                onChange={handleFeedbackChange}
+                placeholder="What features would you like to see? (e.g., dietary filters, restaurant reviews, group ordering...)"
+                className="w-full bg-background border border-border text-foreground px-4 py-3 rounded-[12] focus:outline-1 transition-all duration-300 focus:outline-offset-4 focus:outline-[#e5ff00] resize-none min-h-[120px] placeholder:text-muted-foreground disabled:opacity-75 disabled:cursor-not-allowed"
+                disabled={feedbackSubmitting || feedbackSubmitted}
+              />
+              <button
+                type={feedbackSubmitted ? "button" : "submit"}
+                disabled={feedbackSubmitting || feedbackSubmitted}
+                className={`w-full bg-[#e5ff00] text-black px-6 py-3 rounded-[12] font-semibold transition-all ${
+                  feedbackSubmitted
+                    ? "opacity-75 cursor-not-allowed"
+                    : "hover:bg-opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+                }`}
+              >
+                {feedbackSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg
+                      className="animate-spin -ml-1 mr-2 h-4 w-4 text-black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <title>Loading spinner</title>
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      />
+                    </svg>
+                    Submitting...
+                  </span>
+                ) : feedbackSubmitted ? (
+                  "Feedback Submitted"
+                ) : (
+                  "Submit Feedback"
+                )}
+              </button>
+            </form>
+          </motion.div>
         </motion.div>
       ) : (
         <form onSubmit={handleSubmit} className="relative">
