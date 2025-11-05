@@ -52,17 +52,32 @@ export default function Mission() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 pt-4 border-t border-border">
-            <div className="size-10 rounded-full bg-muted flex items-center justify-center">
-              <span className="text-sm font-semibold text-foreground">CH</span>
+          <div className="flex flex-col gap-4 pt-4 border-t border-border">
+            <div className="flex items-center gap-3">
+              <div className="size-10 rounded-full bg-muted flex items-center justify-center">
+                <span className="text-sm font-semibold text-foreground">CH</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-foreground">
+                  ISINGIZWE Christian
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  Founder of Dishly
+                </span>
+              </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm font-semibold text-foreground">
-                ISINGIZWE Christian
-              </span>
-              <span className="text-xs text-muted-foreground">
-                Founder of Dishly
-              </span>
+            <div className="flex items-center gap-3">
+              <div className="size-10 rounded-full bg-muted flex items-center justify-center">
+                <span className="text-sm font-semibold text-foreground">NB</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-foreground">
+                  Nsanzimana Bruno
+                </span>
+                <span className="text-xs text-muted-foreground">
+                  Co-founder of Dishly
+                </span>
+              </div>
             </div>
           </div>
         </div>
