@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "availableBadge": "verfügbar Anfang Dezember",
+    "title": "KI für Feinschmecker.",
+    "titleSuccess": "Sie sind auf der Warteliste",
+    "description": "Ihr ChatGPT für Essen. Beschreiben Sie jedes Gericht oder laden Sie ein Foto hoch und erhalten Sie Echtzeit-3D-Kartenführung zu den besten Restaurants—plus einfache Buchung und Vorbestellungen.",
+    "descriptionSuccess": "Sie haben Ihren Platz erfolgreich gesichert. Wir melden uns bei Ihnen, sobald Sie an der Reihe sind."
+  },
+  "form": {
+    "emailPlaceholder": "E-Mail",
+    "namePlaceholder": "Name",
+    "continue": "Weiter",
+    "joinWaitlist": "Warteliste beitreten",
+    "joining": "Wird hinzugefügt...",
+    "joined": "Beigetreten",
+    "feedbackLabel": "Haben Sie Feature-Ideen? Teilen Sie sie mit uns!",
+    "feedbackPlaceholder": "Welche Features möchten Sie sehen? (z.B. Diätfilter, Restaurantbewertungen, Gruppenbestellung...)",
+    "submitFeedback": "Feedback absenden",
+    "submitting": "Wird gesendet...",
+    "feedbackSubmitted": "Feedback gesendet",
+    "errors": {
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "rateLimited": "Sie tun das zu oft. Bitte versuchen Sie es später erneut",
+      "emailFailed": "E-Mail konnte nicht gesendet werden. Bitte versuchen Sie es erneut 😢.",
+      "notionFailed": "Ihre Daten konnten nicht gespeichert werden. Bitte versuchen Sie es erneut 😢.",
+      "alreadyOnWaitlist": "Diese E-Mail ist bereits auf der Warteliste! ✨",
+      "feedbackRequired": "Bitte teilen Sie uns Ihre Feature-Ideen mit!",
+      "feedbackFailed": "Feedback konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+      "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut 😢."
+    },
+    "success": {
+      "joined": "Vielen Dank, dass Sie der Warteliste beigetreten sind 🎉",
+      "feedback": "Vielen Dank für Ihr Feedback! 🙏"
+    },
+    "loading": "Wir fügen Sie zur Warteliste hinzu... 🚀"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "KI-gestützte Essenssuche",
+      "description": "Chatten Sie mit unserer KI wie mit ChatGPT, um Essen und Restaurants in der Nähe zu entdecken. Erhalten Sie Echtzeitdaten von registrierten Restaurants in Ihrer Nähe."
+    },
+    "maps": {
+      "title": "Echte 3D-Kartenführung",
+      "description": "Navigieren Sie zu Ihrem gewählten Restaurant mit immersiven 3D-Karten, die klare, detaillierte Anleitung direkt zu Ihrem Ziel bieten."
+    },
+    "preOrder": {
+      "title": "Einfache Vorbestellung",
+      "description": "Vorbestellen für Essen vor Ort oder zum Abholen. Ihr Essen ist genau dann fertig, wenn Sie ankommen—kein Warten, keine Verzögerungen."
+    }
+  },
+  "mission": {
+    "label": "Mission",
+    "title": "Die Zukunft der Essensentdeckung ist hier",
+    "description": "Wir erfinden neu, wie Menschen Essen entdecken. Mit natürlicher Konversation, Bildsuche und personalisiertem Präferenzverständnis—ähnlich wie bei der Interaktion mit ChatGPT—hilft Ihnen unsere KI, das perfekte Gericht und die Restaurants zu finden, die es am besten servieren. Angetrieben von Echtzeit-Gerichtsdaten, KI-nativer Suche und 3D-Navigation ist es unsere Mission, die Suche nach großartigem Essen intuitiv, mühelos und einzigartig persönlich zu gestalten.",
+    "launchDate": "Startdatum:",
+    "launchDateValue": "1. Dezember 2025",
+    "keyBenefit": "Hauptvorteil:",
+    "keyBenefitValue": "Finden Sie perfekte Mahlzeiten sofort, überspringen Sie das Warten",
+    "builtFor": "Gebaut für:",
+    "builtForValue": "Feinschmecker, Gäste und Restaurants",
+    "founder": "Gründer von Dishly",
+    "coFounder": "Mitgründer von Dishly"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Dishly wissen müssen. Finden Sie Antworten auf häufige Fragen.",
+    "q1": "Wie funktioniert die KI-Essenssuche?",
+    "a1": "Genau wie beim Chatten mit ChatGPT können Sie beschreiben, wonach Sie sich sehnen, in natürlicher Sprache—ob es ein Gerichtsname, eine Beschreibung, eine Küchenart oder sogar diätetische Einschränkungen sind. Sie können auch ein Foto von Essen hochladen, das Sie finden möchten. Unsere KI versteht Ihre Anfrage und findet sofort passende Restaurants in der Nähe, unter Verwendung von Echtzeitdaten von registrierten Restaurants in Ihrer Nähe.",
+    "q2": "Wie genau und aktuell sind die Restaurantinformationen?",
+    "a2": "Alle unsere Restaurantdaten kommen direkt von registrierten Restaurantpartnern und gewährleisten Echtzeitgenauigkeit für Gerichte, Verfügbarkeit und Preise. Im Gegensatz zu Apps, die auf Drittanbieter- oder veraltete Informationen angewiesen sind, erhalten Sie bei jeder Suche vertrauenswürdige, aktuelle Daten.",
+    "q3": "Wie funktioniert die Vorbestellung für Essen vor Ort und zum Abholen?",
+    "a3": "Nachdem Sie Ihr perfektes Restaurant gefunden haben, können Sie einen Tisch buchen und Ihre Mahlzeit vorbestellen. Für Essen vor Ort ist Ihr Essen fertig, wenn Sie ankommen—setzen Sie sich einfach hin und genießen Sie. Für Abholung wählen Sie Ihre bevorzugte Zeit und Ihre Bestellung wartet auf Sie. Kein Warten, keine Verzögerungen. Ihre Mahlzeit ist perfekt auf Ihre Ankunft abgestimmt."
+  },
+  "footer": {
+    "copyright": "Erstellt von"
+  }
+}
+

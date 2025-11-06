@@ -1,24 +1,26 @@
+"use client";
+
 import { MessageSquare, Map, ShoppingCart } from "lucide-react";
+import { useLanguage } from "~/providers/language-provider";
 
 export default function Features() {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: MessageSquare,
-      title: "AI-Enabled Food Search",
-      description:
-        "Chat with our AI like ChatGPT to discover food and nearby restaurants. Get real-time, trustworthy data from registered restaurants in your area.",
+      title: t("features.aiSearch.title"),
+      description: t("features.aiSearch.description"),
     },
     {
       icon: Map,
-      title: "Real 3D Maps Guidance",
-      description:
-        "Navigate to your chosen restaurant with immersive 3D maps that provide clear, detailed guidance right to your destination.",
+      title: t("features.maps.title"),
+      description: t("features.maps.description"),
     },
     {
       icon: ShoppingCart,
-      title: "Easy Pre-Ordering",
-      description:
-        "Pre-order for dine-in or pickup. Your meal is ready exactly when you arrive—no waiting, no delays.",
+      title: t("features.preOrder.title"),
+      description: t("features.preOrder.description"),
     },
   ];
 

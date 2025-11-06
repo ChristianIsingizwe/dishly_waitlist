@@ -5,9 +5,30 @@ import { notion } from "~/lib/notion";
 export async function POST(request: Request) {
   const body = await request.json();
   try {
+    const databaseId = `${process.env.NOTION_DB}`;
+    
+    // Check if email already exists in the database
+    const existingUser = await notion.databases.query({
+      database_id: databaseId,
+      filter: {
+        property: "Email",
+        email: {
+          equals: body?.email,
+        },
+      },
+    });
+
+    if (existingUser.results && existingUser.results.length > 0) {
+      return NextResponse.json(
+        { error: "This email is already on the waitlist", success: false },
+        { status: 409 } // 409 Conflict status code
+      );
+    }
+
+    // Email doesn't exist, proceed with creating new entry
     const response = await notion.pages.create({
       parent: {
-        database_id: `${process.env.NOTION_DB}`,
+        database_id: databaseId,
       },
       properties: {
         Email: {

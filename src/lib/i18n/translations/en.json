@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "availableBadge": "available in early December",
+    "title": "AI for food lovers.",
+    "titleSuccess": "You're on the waitlist",
+    "description": "Your ChatGPT for food. Describe any dish or upload a photo and get real-time 3D map guidance to the best restaurants—plus easy booking and pre-orders.",
+    "descriptionSuccess": "You've successfully secured your spot. We'll hit you up the moment it's your turn to dive in"
+  },
+  "form": {
+    "emailPlaceholder": "Email",
+    "namePlaceholder": "Name",
+    "continue": "Continue",
+    "joinWaitlist": "Join waitlist",
+    "joining": "Joining...",
+    "joined": "Joined",
+    "feedbackLabel": "Have feature ideas? Share them with us!",
+    "feedbackPlaceholder": "What features would you like to see? (e.g., dietary filters, restaurant reviews, group ordering...)",
+    "submitFeedback": "Submit Feedback",
+    "submitting": "Submitting...",
+    "feedbackSubmitted": "Feedback Submitted",
+    "errors": {
+      "invalidEmail": "Please enter a valid email address",
+      "rateLimited": "You're doing that too much. Please try again later",
+      "emailFailed": "Failed to send email. Please try again 😢.",
+      "notionFailed": "Failed to save your details. Please try again 😢.",
+      "alreadyOnWaitlist": "This email is already on the waitlist! ✨",
+      "feedbackRequired": "Please share your feature ideas with us!",
+      "feedbackFailed": "Failed to submit feedback. Please try again.",
+      "generic": "An error occurred. Please try again 😢."
+    },
+    "success": {
+      "joined": "Thank you for joining the waitlist 🎉",
+      "feedback": "Thank you for your feedback! 🙏"
+    },
+    "loading": "Getting you on the waitlist... 🚀"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "AI-Enabled Food Search",
+      "description": "Chat with our AI like ChatGPT to discover food and nearby restaurants. Get real-time, trustworthy data from registered restaurants in your area."
+    },
+    "maps": {
+      "title": "Real 3D Maps Guidance",
+      "description": "Navigate to your chosen restaurant with immersive 3D maps that provide clear, detailed guidance right to your destination."
+    },
+    "preOrder": {
+      "title": "Easy Pre-Ordering",
+      "description": "Pre-order for dine-in or pickup. Your meal is ready exactly when you arrive—no waiting, no delays."
+    }
+  },
+  "mission": {
+    "label": "Mission",
+    "title": "The Future of Food Discovery is Here",
+    "description": "We're reimagining how people discover food. With natural conversation, image search, and personalized preference understanding—much like how you interact with ChatGPT—our AI helps you uncover the perfect dish and the restaurants that serve it best. Powered by real-time dish data, AI-native search, and 3D navigation, our mission is to make finding great food intuitive, effortless, and uniquely personal.",
+    "launchDate": "Launch Date:",
+    "launchDateValue": "1st December 2025",
+    "keyBenefit": "Key Benefit:",
+    "keyBenefitValue": "Find perfect meals instantly, skip the wait",
+    "builtFor": "Built For:",
+    "builtForValue": "Food lovers, diners, and restaurants",
+    "founder": "Founder of Dishly",
+    "coFounder": "Co-founder of Dishly"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Dishly. Find answers to common questions.",
+    "q1": "How does the AI food search work?",
+    "a1": "Just like chatting with ChatGPT, you can describe what you're craving in natural language—whether it's a dish name, description, cuisine type, or even dietary restrictions. You can also upload a photo of food you want to find. Our AI understands your request and instantly finds nearby restaurants that match, using real-time data from registered restaurants in your area.",
+    "q2": "How accurate and up-to-date is the restaurant information?",
+    "a2": "All our restaurant data comes directly from registered restaurant partners, ensuring real-time accuracy for dishes, availability, and pricing. Unlike apps that rely on third-party or outdated information, you get trustworthy, current data every time you search.",
+    "q3": "How does pre-ordering work for dine-in and pickup?",
+    "a3": "After finding your perfect restaurant, you can book a table and pre-order your meal. For dine-in, your food will be ready when you arrive—just sit down and enjoy. For pickup, choose your preferred time and your order will be waiting. No waiting around, no delays. Your meal is timed perfectly with your arrival."
+  },
+  "footer": {
+    "copyright": "Crafted by"
+  }
+}
+

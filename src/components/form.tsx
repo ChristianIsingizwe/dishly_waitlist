@@ -4,12 +4,14 @@ import { useState, type FormEvent, type ChangeEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { toast } from "sonner";
 import confetti from "canvas-confetti";
+import { useLanguage } from "~/providers/language-provider";
 
 interface FormProps {
   onSuccessChange?: (success: boolean) => void;
 }
 
 export default function WaitlistForm({ onSuccessChange }: FormProps) {
+  const { t } = useLanguage();
   const [step, setStep] = useState<number>(1);
   const [formData, setFormData] = useState({
     email: "",
@@ -35,12 +37,12 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
     e.preventDefault();
 
     if (!feedback.trim()) {
-      toast.error("Please share your feature ideas with us!");
+      toast.error(t("form.errors.feedbackRequired"));
       return;
     }
 
     if (!userEmail) {
-      toast.error("Unable to save feedback. Please refresh and try again.");
+      toast.error(t("form.errors.feedbackFailed"));
       return;
     }
 
@@ -66,10 +68,10 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
       }
 
       setFeedbackSubmitted(true);
-      toast.success("Thank you for your feedback! 🙏");
+      toast.success(t("form.success.feedback"));
     } catch (error) {
       console.error("Error submitting feedback:", error);
-      toast.error("Failed to submit feedback. Please try again.");
+      toast.error(t("form.errors.feedbackFailed"));
     } finally {
       setFeedbackSubmitting(false);
     }
@@ -85,7 +87,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
 
     if (step === 1) {
       if (!formData.email || !isValidEmail(formData.email)) {
-        toast.error("Please enter a valid email address");
+        toast.error(t("form.errors.invalidEmail"));
         return;
       }
 
@@ -125,12 +127,15 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
               body: JSON.stringify({ name, email }),
             });
           })
-          .then((notionResponse) => {
+          .then(async (notionResponse) => {
             if (!notionResponse) return;
 
             if (!notionResponse.ok) {
               if (notionResponse.status === 429) {
                 reject("Rate limited");
+              } else if (notionResponse.status === 409) {
+                // Duplicate email error - use status code for reliable detection
+                reject("DUPLICATE_EMAIL");
               } else {
                 reject("Notion insertion failed");
               }
@@ -144,7 +149,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
       });
 
       toast.promise(promise, {
-        loading: "Getting you on the waitlist... 🚀",
+        loading: t("form.loading"),
         success: (data) => {
           setUserEmail(formData.email);
           setFormData({ email: "", name: "" });
@@ -165,19 +170,25 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
               ],
             });
           }, 100);
-          return "Thank you for joining the waitlist 🎉";
+          return t("form.success.joined");
         },
         error: (error) => {
+          // Handle duplicate email - reset form and go back to step 1
+          if (error === "DUPLICATE_EMAIL" || error.includes("already on the waitlist") || error === "This email is already on the waitlist") {
+            setFormData({ email: "", name: "" });
+            setStep(1);
+            return t("form.errors.alreadyOnWaitlist");
+          }
           if (error === "Rate limited") {
-            return "You're doing that too much. Please try again later";
+            return t("form.errors.rateLimited");
           }
           if (error === "Email sending failed") {
-            return "Failed to send email. Please try again 😢.";
+            return t("form.errors.emailFailed");
           }
           if (error === "Notion insertion failed") {
-            return "Failed to save your details. Please try again 😢.";
+            return t("form.errors.notionFailed");
           }
-          return "An error occurred. Please try again 😢.";
+          return t("form.errors.generic");
         },
       });
 
@@ -210,7 +221,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
               className="bg-[#e5ff00] text-black px-6 py-2 rounded-[12] font-semibold opacity-75 cursor-not-allowed transition-all"
               type="button"
             >
-              Joined
+              {t("form.joined")}
             </button>
           </motion.div>
 
@@ -221,7 +232,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
             transition={{ delay: 0.4 }}
           >
             <label className="text-sm font-medium text-foreground text-center">
-              Have feature ideas? Share them with us!
+              {t("form.feedbackLabel")}
             </label>
             <form
               onSubmit={handleFeedbackSubmit}
@@ -230,7 +241,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
               <textarea
                 value={feedback}
                 onChange={handleFeedbackChange}
-                placeholder="What features would you like to see? (e.g., dietary filters, restaurant reviews, group ordering...)"
+                placeholder={t("form.feedbackPlaceholder")}
                 className="w-full bg-background border border-border text-foreground px-4 py-3 rounded-[12] focus:outline-1 transition-all duration-300 focus:outline-offset-4 focus:outline-[#e5ff00] resize-none min-h-[120px] placeholder:text-muted-foreground disabled:opacity-75 disabled:cursor-not-allowed"
                 disabled={feedbackSubmitting || feedbackSubmitted}
               />
@@ -267,12 +278,12 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                       />
                     </svg>
-                    Submitting...
+                    {t("form.submitting")}
                   </span>
                 ) : feedbackSubmitted ? (
-                  "Feedback Submitted"
+                  t("form.feedbackSubmitted")
                 ) : (
-                  "Submit Feedback"
+                  t("form.submitFeedback")
                 )}
               </button>
             </form>
@@ -294,7 +305,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email"
+                  placeholder={t("form.emailPlaceholder")}
                   className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12]  focus:outline-1 transition-all duration-300 focus:outline-offset-4 focus:outline-[#e5ff00]"
                   disabled={loading}
                   required
@@ -304,7 +315,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
                   className="absolute right-0 font-semibold top-0 bottom-0 bg-[#e5ff00] flex justify-center items-center cursor-pointer text-black px-5 py-2 m-2 rounded-[12] hover:bg-opacity-90 transition-all disabled:opacity-50"
                   disabled={loading}
                 >
-                  Continue
+                  {t("form.continue")}
                 </button>
               </motion.div>
             ) : (
@@ -321,7 +332,7 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Name"
+                    placeholder={t("form.namePlaceholder")}
                     className="flex-grow bg-background border border-border text-foreground px-4 py-3 rounded-[12]  focus:outline-1 transition-all duration-300 focus:outline-offset-4 focus:outline-[#e5ff00]"
                     disabled={loading}
                     required
@@ -355,10 +366,10 @@ export default function WaitlistForm({ onSuccessChange }: FormProps) {
                             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                           />
                         </svg>
-                        Joining...
+                        {t("form.joining")}
                       </span>
                     ) : (
-                      <span>Join waitlist</span>
+                      <span>{t("form.joinWaitlist")}</span>
                     )}
                   </button>
                 </div>

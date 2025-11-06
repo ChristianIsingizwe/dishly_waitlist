@@ -4,6 +4,7 @@ import { Toaster } from "sonner";
 
 import "./globals.css";
 import Header from "~/components/header";
+import { LanguageProvider } from "~/providers/language-provider";
 import { ThemeProvider } from "~/providers/theme-provider";
 
 const geistMono = Geist_Mono({
@@ -33,11 +34,13 @@ export default function RootLayout({
 			<body
 				className={`${interTight.variable} ${geistMono.variable} antialiased flex flex-col h-full`}
 			>
-				<ThemeProvider>
-					<Header />
-					<Toaster />
-					{children}
-				</ThemeProvider>
+				<LanguageProvider>
+					<ThemeProvider>
+						<Header />
+						<Toaster />
+						{children}
+					</ThemeProvider>
+				</LanguageProvider>
 			</body>
 		</html>
 	);

@@ -1,14 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 import Countdown from "./countdown";
 import People from "./people";
 import { Logo } from "./svgs";
 import Form from "./form";
+import { useLanguage } from "~/providers/language-provider";
 
 export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
   const [isSuccess, setIsSuccess] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="flex flex-col items-center justify-center gap-6">
@@ -20,18 +22,16 @@ export default function Hero({ waitlistPeople }: { waitlistPeople: number }) {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-400" />
           </span>
           <p className="uppercase text-sm font-medium">
-            available in early December
+            {t("hero.availableBadge")}
           </p>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 max-w-2xl">
         <h2 className="text-4xl font-bold text-foreground">
-          {isSuccess ? "You're on the waitlist" : "AI for food lovers."}
+          {isSuccess ? t("hero.titleSuccess") : t("hero.title")}
         </h2>
         <p className="text-base text-muted-foreground text-center max-w-md">
-          {isSuccess
-            ? "You've successfully secured your spot. We'll hit you up the moment it's your turn to dive in"
-            : "Your ChatGPT for food. Describe any dish or upload a photo and get real-time 3D map guidance to the best restaurants—plus easy booking and pre-orders."}
+          {isSuccess ? t("hero.descriptionSuccess") : t("hero.description")}
         </p>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 w-full max-w-md">

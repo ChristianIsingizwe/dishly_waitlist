@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "availableBadge": "disponibile all'inizio di dicembre",
+    "title": "IA per gli amanti del cibo.",
+    "titleSuccess": "Sei nella lista d'attesa",
+    "description": "Il tuo ChatGPT per il cibo. Descrivi qualsiasi piatto o carica una foto e ottieni indicazioni di mappe 3D in tempo reale verso i migliori ristoranti—più prenotazioni facili e ordini anticipati.",
+    "descriptionSuccess": "Hai assicurato con successo il tuo posto. Ti contatteremo nel momento in cui sarà il tuo turno di immergerti."
+  },
+  "form": {
+    "emailPlaceholder": "Email",
+    "namePlaceholder": "Nome",
+    "continue": "Continua",
+    "joinWaitlist": "Unisciti alla lista d'attesa",
+    "joining": "Iscrizione in corso...",
+    "joined": "Iscritto",
+    "feedbackLabel": "Hai idee per le funzionalità? Condividile con noi!",
+    "feedbackPlaceholder": "Quali funzionalità vorresti vedere? (ad esempio, filtri dietetici, recensioni di ristoranti, ordini di gruppo...)",
+    "submitFeedback": "Invia feedback",
+    "submitting": "Invio in corso...",
+    "feedbackSubmitted": "Feedback inviato",
+    "errors": {
+      "invalidEmail": "Inserisci un indirizzo email valido",
+      "rateLimited": "Stai facendo questo troppo spesso. Riprova più tardi",
+      "emailFailed": "Invio email fallito. Riprova 😢.",
+      "notionFailed": "Salvataggio dei tuoi dati fallito. Riprova 😢.",
+      "alreadyOnWaitlist": "Questa email è già nella lista d'attesa! ✨",
+      "feedbackRequired": "Condividi le tue idee per le funzionalità con noi!",
+      "feedbackFailed": "Invio feedback fallito. Riprova.",
+      "generic": "Si è verificato un errore. Riprova 😢."
+    },
+    "success": {
+      "joined": "Grazie per esserti unito alla lista d'attesa 🎉",
+      "feedback": "Grazie per il tuo feedback! 🙏"
+    },
+    "loading": "Aggiunta alla lista d'attesa... 🚀"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "Ricerca cibo abilitata dall'IA",
+      "description": "Chatta con la nostra IA come ChatGPT per scoprire cibo e ristoranti nelle vicinanze. Ottieni dati in tempo reale e affidabili da ristoranti registrati nella tua zona."
+    },
+    "maps": {
+      "title": "Guida con mappe 3D reali",
+      "description": "Naviga verso il ristorante scelto con mappe 3D immersive che forniscono indicazioni chiare e dettagliate direttamente alla tua destinazione."
+    },
+    "preOrder": {
+      "title": "Preordini facili",
+      "description": "Preordina per cena sul posto o da asporto. Il tuo pasto sarà pronto esattamente quando arrivi—nessuna attesa, nessun ritardo."
+    }
+  },
+  "mission": {
+    "label": "Missione",
+    "title": "Il futuro della scoperta del cibo è qui",
+    "description": "Stiamo reinventando il modo in cui le persone scoprono il cibo. Con conversazione naturale, ricerca di immagini e comprensione delle preferenze personalizzate—molto simile a come interagisci con ChatGPT—la nostra IA ti aiuta a scoprire il piatto perfetto e i ristoranti che lo servono al meglio. Alimentato da dati di piatti in tempo reale, ricerca nativa IA e navigazione 3D, la nostra missione è rendere la ricerca di ottimo cibo intuitiva, senza sforzo e unica nel suo genere.",
+    "launchDate": "Data di lancio:",
+    "launchDateValue": "1 dicembre 2025",
+    "keyBenefit": "Vantaggio chiave:",
+    "keyBenefitValue": "Trova pasti perfetti all'istante, salta l'attesa",
+    "builtFor": "Costruito per:",
+    "builtForValue": "Amanti del cibo, clienti e ristoranti",
+    "founder": "Fondatore di Dishly",
+    "coFounder": "Co-fondatore di Dishly"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Tutto ciò che devi sapere su Dishly. Trova risposte alle domande comuni.",
+    "q1": "Come funziona la ricerca cibo con IA?",
+    "a1": "Proprio come chattare con ChatGPT, puoi descrivere ciò che desideri in linguaggio naturale—sia che si tratti di un nome di piatto, descrizione, tipo di cucina o persino restrizioni dietetiche. Puoi anche caricare una foto del cibo che vuoi trovare. La nostra IA comprende la tua richiesta e trova istantaneamente ristoranti nelle vicinanze che corrispondono, utilizzando dati in tempo reale da ristoranti registrati nella tua zona.",
+    "q2": "Quanto sono accurate e aggiornate le informazioni sui ristoranti?",
+    "a2": "Tutti i nostri dati sui ristoranti provengono direttamente da partner di ristoranti registrati, garantendo accuratezza in tempo reale per piatti, disponibilità e prezzi. A differenza delle app che si affidano a informazioni di terze parti o obsolete, ottieni dati affidabili e attuali ogni volta che cerchi.",
+    "q3": "Come funziona il preordine per cena sul posto e da asporto?",
+    "a3": "Dopo aver trovato il tuo ristorante perfetto, puoi prenotare un tavolo e preordinare il tuo pasto. Per cena sul posto, il tuo cibo sarà pronto quando arrivi—siediti semplicemente e goditi. Per da asporto, scegli il tuo orario preferito e il tuo ordine ti aspetterà. Nessuna attesa, nessun ritardo. Il tuo pasto è perfettamente sincronizzato con il tuo arrivo."
+  },
+  "footer": {
+    "copyright": "Creato da"
+  }
+}
+

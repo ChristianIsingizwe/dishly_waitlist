@@ -1,6 +1,11 @@
+"use client";
+
 import { ChefHat } from "lucide-react";
+import { useLanguage } from "~/providers/language-provider";
 
 export default function Mission() {
+  const { t } = useLanguage();
+  
   return (
     <div className="flex flex-col items-center justify-center gap-8 py-12 w-full px-4">
       <div className="bg-card border border-border rounded-xl p-8 md:p-12 max-w-4xl w-full shadow-xs relative">
@@ -11,43 +16,42 @@ export default function Mission() {
         <div className="flex flex-col gap-6 pr-20">
           <div className="flex flex-col gap-2">
             <p className="text-sm text-muted-foreground uppercase tracking-wide">
-              Mission
+              {t("mission.label")}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              The Future of Food Discovery is Here
+              {t("mission.title")}
             </h2>
           </div>
 
           <div className="flex flex-col gap-4 text-muted-foreground">
             <p className="text-base leading-relaxed">
-            We’re reimagining how people discover food. With natural conversation, image search, and personalized preference understanding—much like how you interact with ChatGPT—our AI helps you uncover the perfect dish and the restaurants that serve it best.
-            Powered by real-time dish data, AI-native search, and 3D navigation, our mission is to make finding great food intuitive, effortless, and uniquely personal.
+              {t("mission.description")}
             </p>
           </div>
 
           <div className="flex flex-col gap-3 pt-2">
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <span className="text-sm font-semibold text-foreground">
-                Launch Date:
+                {t("mission.launchDate")}
               </span>
               <span className="text-sm text-muted-foreground">
-                1<sup>st</sup> December 2025
+                {t("mission.launchDateValue")}
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <span className="text-sm font-semibold text-foreground">
-                Key Benefit:
+                {t("mission.keyBenefit")}
               </span>
               <span className="text-sm text-muted-foreground">
-                Find perfect meals instantly, skip the wait
+                {t("mission.keyBenefitValue")}
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <span className="text-sm font-semibold text-foreground">
-                Built For:
+                {t("mission.builtFor")}
               </span>
               <span className="text-sm text-muted-foreground">
-                Food lovers, diners, and restaurants
+                {t("mission.builtForValue")}
               </span>
             </div>
           </div>
@@ -62,7 +66,7 @@ export default function Mission() {
                   ISINGIZWE Christian
                 </span>
                 <span className="text-xs text-muted-foreground">
-                  Founder of Dishly
+                  {t("mission.founder")}
                 </span>
               </div>
             </div>
@@ -75,7 +79,7 @@ export default function Mission() {
                   Nsanzimana Bruno
                 </span>
                 <span className="text-xs text-muted-foreground">
-                  Co-founder of Dishly
+                  {t("mission.coFounder")}
                 </span>
               </div>
             </div>

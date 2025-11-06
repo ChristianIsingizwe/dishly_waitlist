@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "availableBadge": "disponible début décembre",
+    "title": "IA pour les amateurs de cuisine.",
+    "titleSuccess": "Vous êtes sur la liste d'attente",
+    "description": "Votre ChatGPT pour la nourriture. Décrivez n'importe quel plat ou téléchargez une photo et obtenez des indications de cartes 3D en temps réel vers les meilleurs restaurants—plus des réservations faciles et des précommandes.",
+    "descriptionSuccess": "Vous avez sécurisé votre place avec succès. Nous vous contacterons au moment où ce sera votre tour de plonger."
+  },
+  "form": {
+    "emailPlaceholder": "E-mail",
+    "namePlaceholder": "Nom",
+    "continue": "Continuer",
+    "joinWaitlist": "Rejoindre la liste d'attente",
+    "joining": "Inscription en cours...",
+    "joined": "Inscrit",
+    "feedbackLabel": "Vous avez des idées de fonctionnalités ? Partagez-les avec nous !",
+    "feedbackPlaceholder": "Quelles fonctionnalités aimeriez-vous voir ? (par exemple, filtres diététiques, avis de restaurants, commandes de groupe...)",
+    "submitFeedback": "Soumettre les commentaires",
+    "submitting": "Envoi en cours...",
+    "feedbackSubmitted": "Commentaires soumis",
+    "errors": {
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+      "rateLimited": "Vous faites cela trop souvent. Veuillez réessayer plus tard",
+      "emailFailed": "Échec de l'envoi de l'e-mail. Veuillez réessayer 😢.",
+      "notionFailed": "Échec de l'enregistrement de vos données. Veuillez réessayer 😢.",
+      "alreadyOnWaitlist": "Cet e-mail est déjà sur la liste d'attente ! ✨",
+      "feedbackRequired": "Veuillez partager vos idées de fonctionnalités avec nous !",
+      "feedbackFailed": "Échec de l'envoi des commentaires. Veuillez réessayer.",
+      "generic": "Une erreur s'est produite. Veuillez réessayer 😢."
+    },
+    "success": {
+      "joined": "Merci d'avoir rejoint la liste d'attente 🎉",
+      "feedback": "Merci pour vos commentaires ! 🙏"
+    },
+    "loading": "Ajout à la liste d'attente... 🚀"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "Recherche de nourriture activée par IA",
+      "description": "Discutez avec notre IA comme ChatGPT pour découvrir de la nourriture et des restaurants à proximité. Obtenez des données en temps réel et fiables provenant de restaurants enregistrés dans votre région."
+    },
+    "maps": {
+      "title": "Guidage par cartes 3D réelles",
+      "description": "Naviguez vers votre restaurant choisi avec des cartes 3D immersives qui fournissent des indications claires et détaillées directement à votre destination."
+    },
+    "preOrder": {
+      "title": "Précommande facile",
+      "description": "Précommandez pour manger sur place ou à emporter. Votre repas sera prêt exactement à votre arrivée—pas d'attente, pas de retard."
+    }
+  },
+  "mission": {
+    "label": "Mission",
+    "title": "L'avenir de la découverte culinaire est ici",
+    "description": "Nous réinventons la façon dont les gens découvrent la nourriture. Avec une conversation naturelle, une recherche d'images et une compréhension des préférences personnalisées—un peu comme votre interaction avec ChatGPT—notre IA vous aide à découvrir le plat parfait et les restaurants qui le servent le mieux. Alimenté par des données de plats en temps réel, une recherche native IA et une navigation 3D, notre mission est de rendre la recherche de grande nourriture intuitive, sans effort et unique en son genre.",
+    "launchDate": "Date de lancement :",
+    "launchDateValue": "1er décembre 2025",
+    "keyBenefit": "Avantage clé :",
+    "keyBenefitValue": "Trouvez des repas parfaits instantanément, évitez l'attente",
+    "builtFor": "Conçu pour :",
+    "builtForValue": "Gourmets, clients et restaurants",
+    "founder": "Fondateur de Dishly",
+    "coFounder": "Cofondateur de Dishly"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "subtitle": "Tout ce que vous devez savoir sur Dishly. Trouvez des réponses aux questions courantes.",
+    "q1": "Comment fonctionne la recherche de nourriture par IA ?",
+    "a1": "Tout comme discuter avec ChatGPT, vous pouvez décrire ce dont vous avez envie en langage naturel—qu'il s'agisse d'un nom de plat, d'une description, d'un type de cuisine ou même de restrictions alimentaires. Vous pouvez également télécharger une photo de la nourriture que vous souhaitez trouver. Notre IA comprend votre demande et trouve instantanément des restaurants à proximité qui correspondent, en utilisant des données en temps réel provenant de restaurants enregistrés dans votre région.",
+    "q2": "Quelle est la précision et l'actualité des informations sur les restaurants ?",
+    "a2": "Toutes nos données de restaurants proviennent directement de partenaires de restaurants enregistrés, garantissant une précision en temps réel pour les plats, la disponibilité et les prix. Contrairement aux applications qui dépendent d'informations tierces ou obsolètes, vous obtenez des données fiables et actuelles à chaque recherche.",
+    "q3": "Comment fonctionne la précommande pour manger sur place et à emporter ?",
+    "a3": "Après avoir trouvé votre restaurant parfait, vous pouvez réserver une table et précommander votre repas. Pour manger sur place, votre nourriture sera prête à votre arrivée—asseyez-vous simplement et profitez. Pour à emporter, choisissez votre heure préférée et votre commande vous attendra. Pas d'attente, pas de retard. Votre repas est parfaitement synchronisé avec votre arrivée."
+  },
+  "footer": {
+    "copyright": "Créé par"
+  }
+}
+

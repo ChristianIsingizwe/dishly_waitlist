@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "availableBadge": "disponible a principios de diciembre",
+    "title": "IA para amantes de la comida.",
+    "titleSuccess": "Estás en la lista de espera",
+    "description": "Tu ChatGPT para comida. Describe cualquier plato o sube una foto y obtén guía de mapas 3D en tiempo real a los mejores restaurantes—además de reservas fáciles y pedidos anticipados.",
+    "descriptionSuccess": "Has asegurado tu lugar con éxito. Te contactaremos en el momento en que sea tu turno de sumergirte."
+  },
+  "form": {
+    "emailPlaceholder": "Correo electrónico",
+    "namePlaceholder": "Nombre",
+    "continue": "Continuar",
+    "joinWaitlist": "Unirse a la lista de espera",
+    "joining": "Uniéndose...",
+    "joined": "Unido",
+    "feedbackLabel": "¿Tienes ideas de funciones? ¡Compártelas con nosotros!",
+    "feedbackPlaceholder": "¿Qué funciones te gustaría ver? (por ejemplo, filtros dietéticos, reseñas de restaurantes, pedidos grupales...)",
+    "submitFeedback": "Enviar comentarios",
+    "submitting": "Enviando...",
+    "feedbackSubmitted": "Comentarios enviados",
+    "errors": {
+      "invalidEmail": "Por favor ingresa una dirección de correo electrónico válida",
+      "rateLimited": "Estás haciendo eso demasiado. Por favor intenta de nuevo más tarde",
+      "emailFailed": "Error al enviar el correo electrónico. Por favor intenta de nuevo 😢.",
+      "notionFailed": "Error al guardar tus datos. Por favor intenta de nuevo 😢.",
+      "alreadyOnWaitlist": "¡Este correo electrónico ya está en la lista de espera! ✨",
+      "feedbackRequired": "¡Por favor comparte tus ideas de funciones con nosotros!",
+      "feedbackFailed": "Error al enviar comentarios. Por favor intenta de nuevo.",
+      "generic": "Ocurrió un error. Por favor intenta de nuevo 😢."
+    },
+    "success": {
+      "joined": "¡Gracias por unirte a la lista de espera 🎉",
+      "feedback": "¡Gracias por tus comentarios! 🙏"
+    },
+    "loading": "Agregándote a la lista de espera... 🚀"
+  },
+  "features": {
+    "aiSearch": {
+      "title": "Búsqueda de comida habilitada por IA",
+      "description": "Chatea con nuestra IA como ChatGPT para descubrir comida y restaurantes cercanos. Obtén datos en tiempo real y confiables de restaurantes registrados en tu área."
+    },
+    "maps": {
+      "title": "Guía de mapas 3D reales",
+      "description": "Navega a tu restaurante elegido con mapas 3D inmersivos que brindan orientación clara y detallada directamente a tu destino."
+    },
+    "preOrder": {
+      "title": "Pedidos anticipados fáciles",
+      "description": "Pide por adelantado para comer en el restaurante o para llevar. Tu comida estará lista exactamente cuando llegues—sin esperas, sin retrasos."
+    }
+  },
+  "mission": {
+    "label": "Misión",
+    "title": "El futuro del descubrimiento de comida está aquí",
+    "description": "Estamos reinventando cómo las personas descubren la comida. Con conversación natural, búsqueda de imágenes y comprensión de preferencias personalizadas—muy similar a cómo interactúas con ChatGPT—nuestra IA te ayuda a descubrir el plato perfecto y los restaurantes que mejor lo sirven. Impulsado por datos de platos en tiempo real, búsqueda nativa de IA y navegación 3D, nuestra misión es hacer que encontrar excelente comida sea intuitivo, sin esfuerzo y únicamente personal.",
+    "launchDate": "Fecha de lanzamiento:",
+    "launchDateValue": "1 de diciembre de 2025",
+    "keyBenefit": "Beneficio clave:",
+    "keyBenefitValue": "Encuentra comidas perfectas al instante, salta la espera",
+    "builtFor": "Construido para:",
+    "builtForValue": "Amantes de la comida, comensales y restaurantes",
+    "founder": "Fundador de Dishly",
+    "coFounder": "Cofundador de Dishly"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitas saber sobre Dishly. Encuentra respuestas a preguntas comunes.",
+    "q1": "¿Cómo funciona la búsqueda de comida con IA?",
+    "a1": "Al igual que chatear con ChatGPT, puedes describir lo que anhelas en lenguaje natural—ya sea un nombre de plato, descripción, tipo de cocina o incluso restricciones dietéticas. También puedes subir una foto de la comida que quieres encontrar. Nuestra IA entiende tu solicitud e instantáneamente encuentra restaurantes cercanos que coinciden, usando datos en tiempo real de restaurantes registrados en tu área.",
+    "q2": "¿Qué tan precisa y actualizada es la información del restaurante?",
+    "a2": "Todos nuestros datos de restaurantes provienen directamente de socios de restaurantes registrados, asegurando precisión en tiempo real para platos, disponibilidad y precios. A diferencia de las aplicaciones que dependen de información de terceros o desactualizada, obtienes datos confiables y actuales cada vez que buscas.",
+    "q3": "¿Cómo funciona el pedido anticipado para comer en el restaurante y para llevar?",
+    "a3": "Después de encontrar tu restaurante perfecto, puedes reservar una mesa y pedir tu comida por adelantado. Para comer en el restaurante, tu comida estará lista cuando llegues—simplemente siéntate y disfruta. Para llevar, elige tu hora preferida y tu pedido estará esperando. Sin esperas, sin retrasos. Tu comida está perfectamente sincronizada con tu llegada."
+  },
+  "footer": {
+    "copyright": "Creado por"
+  }
+}
+
